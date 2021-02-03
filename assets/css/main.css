@@ -47,6 +47,7 @@
 	padding-top: 2em;
 	text-align: left;
 	line-height: 2em;
+
 	
 }
 
@@ -2984,11 +2985,20 @@ button:disabled,
 .subpage {
 	padding-top: 44px;
 }
+.subpage .dropdown-content {
+	display: none;
+	position: absolute;
+	padding-top: 2em;
+	text-align: left;
+	line-height: 2em;
+	background: #2d517e;
+	
+}
 
 .subpage #header {
-	background: #5385c1;
+	background: #2d517e;
 	top: 0;
-	height: 44px;
+	height: 2.5em;
 	line-height: 44px;
 	position: fixed;
 }
