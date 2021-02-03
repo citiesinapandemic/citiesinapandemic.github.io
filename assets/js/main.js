@@ -65,6 +65,9 @@
 
 })(jQuery);
 
+var foo = $('#nav > ul');
+foo.dropotron();
+
 	window.cookieconsent.initialise({
 		"palette": {
 			"popup": {
