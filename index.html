@@ -18,25 +18,47 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 
 <body>
-
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+	<script>
+	window.cookieconsent.initialise({
+	"palette": {
+	"popup": { "background": "#FFFFFF", "text": "#1C1C1C"},
+	"button": { "background": "#A4A4A4"}},
+	  "theme": "edgeless",
+	  "position": "bottom",
+	  "content": {
+	  "message": "This site uses cookies. By using the website and its offers and continuing to navigate, you accept these cookies.",
+	  "dismiss": "Accept",
+	  "link": "Data Privacy",
+	"href": "<a href="impr_dataprivacy.html#data_privacy">Data Privacy </a>"
+	}
+	  });
+	</script>
 	<!-- Header -->
 	<header id="header">
 		<div class="inner">
+
 			<a href="index.html" class="logo">Home</a>
-			<nav class="nav">
-				<div class="dropdown">
-					<a>Methods<i class="fa fa-caret-down"></i></a>
-					<div class="dropdown-content">
+			<nav id="nav">
+				<div class="menu">
+					<a class="dropdown_text">Methods<i class="fa fa-caret-down"></i></a>
+						<div class="drop_cont">
 						<a href="mentalmaps.html">MentalMaps</a>
 						<a href="narratives.html">Narratives</a>
 						<a href="photostory.html">Photostory</a>
 					</div>
-					<a href="#two">About Us</a>
+						
+				<a>About Us<i class="fa fa-caret-down"></i></a>
+				<div class="drop_cont">
+						<a href="mentalmaps.html">Project</a>
+						<a href="#team">Our Team</a>
+						<a href="photostory.html">#Embededness</a>
+					</div>
 				</div>
-				
 			</nav>
 			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 		</div>
@@ -106,15 +128,14 @@
 
 				<!-- Two -->
 				<section id="two" class="wrapper style1 special">
-					<div class="inner">
+					<div id="team"class="inner">
 						<header>
-							<h2>About Us</h2>
-							<p>We are a team of six Austrian students working at a research project</p>
+							<h2>Our Team</h2>
 						</header>
 						<div class="flex flex-4">
 							<div class="box person">
 								<div class="image round">
-									<img src="images/carl.jpg" alt="Person 1" />
+									<img src="images/car.jpg" alt="Person 1" />
 								</div>
 								<h3>Carlotta</h3>
 								<p><br><a href="mailto:Carlotta.schlosser@student.uibk.ac.at" class="button special">Send
@@ -122,15 +143,15 @@
 							</div>
 							<div class="box person">
 								<div class="image round">
-									<img src="images/pic2.jpg" alt="Person 2" />
+									<img src="images/jan.jpg" alt="Person 2" />
 								</div>
 								<h3>Jan</h3>
-								<p><br><a href="mailto:richard.kempert@student.uibk.ac.at" class="button special">Send
+								<p>I study Geography and I am interested in topics like migration policies and political geography. Outside the research context I am interested in mountaineering and race biking.<br><a href="mailto:Jan.Misera@student.uibk.ac.at" class="button special">Send
 										Email</a></p>
 							</div>
 							<div class="box person">
 								<div class="image round">
-									<img src="images/Jo.png" alt="Person 3" />
+									<img src="images/joh.png" alt="Person 3" />
 								</div>
 								<h3>Johannes</h3>
 								<p>Hi there, my name is Johannes and I´m studying Geography in the 4th semester at the
@@ -142,27 +163,27 @@
 
 							<div class="box person">
 								<div class="image round">
-									<img src="images/Julia_Baumgartner.jpg" alt="Person 4" />
+									<img src="images/jul.jpg" alt="Person 4" />
 								</div>
 								<h3>Julia</h3>
-								<p>I am studying Geography and I am interested in topics like sustainable development and connected issues like agriculture, the creation of an equal and peaceful society and the protection of our planet.<br><a href="mailto:Julia.Baumgartner@student.uibk.ac.at" class="button special">Send
+								<p>I study Geography and I am interested in topics like sustainable development and connected issues like agriculture, the creation of an equal and peaceful society and the protection of our planet.<br><a href="mailto:Julia.Baumgartner@student.uibk.ac.at" class="button special">Send
 										Email</a></p>
 							</div>
 							<div class="box person">
 								<div class="image round">
-									<img src="images/Lisa.jpg" alt="Person 5" />
+									<img src="images/lis.jpg" alt="Person 5" />
 								</div>
 								<h3>Lisa</h3>
-								<p>I love our planet and the people on it, so I want to keep it safe. 😊 <br><a
+								<p>Hi everybody, my name is Lisa. I study Geography at the University of Innsbruck. I’m very much interested in sustainability, regional development and global justice. I love spending my time in the nature, making music or hanging out with friends. <br><a
 										href="mailto:Lisa.moedlhammer@student.uibk.ac.att" class="button special">Send
 										Email</a></p>
 							</div>
 							<div class="box person">
 								<div class="image round">
-									<img src="images/rk.jpg" alt="Person 6" />
+									<img src="images/ric.jpg" alt="Person 6" />
 								</div>
 								<h3>Richard</h3>
-								<p>I am a Geography and Organization Studies student of Innsbruck. Research (and practice) related I am interested in participation, sustainability and transparency. Not research related I am interested in enjoying the sun, mountaineering and taking care of my old bicycles<br><a href="mailto:richard.kempert@student.uibk.ac.at" class="button special">Send
+								<p>I am a Geography and Organization Studies student of Innsbruck. Research (and practice) related I am interested in participation, sustainability and transparency. Not research (but very much practice) related I am interested in enjoying the sun, mountaineering and taking care of my old bicycles<br><a href="mailto:richard.kempert@student.uibk.ac.at" class="button special">Send
 										Email</a></p>
 							</div>
 						</div>
@@ -219,9 +240,9 @@
 						href="https://unsplash.com">Unsplash</a>.
 				</div>
 				<div class="flex">
-					<p><a href="#">Impressum </a> <br>
-						<a href="#">Data Privacy </a> <br>
-						<a href="#">Contact </a>
+					<p><a href="impr_dataprivacy.html#impressum">Impressum </a> <br>
+						<a href="impr_dataprivacy.html#data_privacy">Data Privacy </a> <br>
+						<a href="index.html#team">Contact </a>
 					</p>
 				</div>
 				<ul class="icons">
