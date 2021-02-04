@@ -47,6 +47,7 @@
 	padding-top: 2em;
 	text-align: left;
 	line-height: 2em;
+	min-width: 15em;
 
 	
 }
@@ -1786,7 +1787,7 @@ body {
 }
 
 body {
-	background: #fff;
+	background: rgb(214, 211, 211);
 }
 
 body.is-loading *,
@@ -1808,7 +1809,7 @@ body,
 input,
 select,
 textarea {
-	color: #7e7d7d;
+	color: #5a5757;
 	font-family: "Raleway", Arial, Helvetica, sans-serif;
 	font-size: 13pt;
 	font-weight: 300;
@@ -1892,6 +1893,7 @@ i {
 
 p {
 	margin: 0 0 2em 0;
+	
 }
 
 h1,
@@ -2075,7 +2077,7 @@ article.wrapper.style1 header h2 {
 
 section.wrapper.style1 header p,
 article.wrapper.style1 header p {
-	color: #bacee6;
+	color: #8ea5c0;
 }
 
 section.wrapper.style1 h3,
@@ -2126,7 +2128,7 @@ article.wrapper.style1 h3 {
 }
 
 header p {
-	color: #bbb;
+	color: #5a5757;
 	position: relative;
 	margin: 0 0 1.5em 0;
 }
@@ -3294,7 +3296,7 @@ button:disabled,
 }
 
 #footer .copyright {
-	color: #bbb;
+	color: rgb(167, 162, 162);
 	font-size: 0.8em;
 	margin: 0 0 2em 0;
 	padding: 0;
