@@ -36,6 +36,9 @@
 .leaflet-popup-content {
 	width: auto !important;
 }
+#cent {
+ text-align: center;
+}
 
 .dropdown{
 	position: relative;
@@ -2553,6 +2556,10 @@ input[type="radio"]+label:before {
 .image.fit img {
 	width: 100%;
 }
+#img-small {
+	width: 70%;
+	left: 25%;
+}
 
 .image.main {
 	display: block;
@@ -2936,6 +2943,14 @@ button.special,
 	color: #ffffff !important;
 	margin: .5em;
 }
+.button.special.btn {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
 
 input[type="submit"].special:hover,
 input[type="reset"].special:hover,
@@ -2970,6 +2985,12 @@ button:disabled,
 	opacity: 0.25;
 }
 
+.button.special.round {
+	padding: 70px 70px;
+	border-radius: 50%;
+	max-width: 70px;
+	
+}
 @media screen and (max-width: 480px) {
 
 	input[type="submit"],
@@ -3216,14 +3237,14 @@ button:disabled,
 /* Banner */
 
 #banner {
-	padding: 12em 0 10em 0;
+	padding: 12em 0 8em 0;
 	background-image: url('../../images/banner.jpg');
 	background-size: cover;
 	background-position: top;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	text-align: center;
-	border-top: 0.5em solid #5385c1;
+	border-top: 0em solid #5385c1;
 }
 
 #banner h1 {
