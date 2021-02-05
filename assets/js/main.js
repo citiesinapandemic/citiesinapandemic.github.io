@@ -65,7 +65,7 @@
 
 })(jQuery);
 
-var countDownDate = new Date("Feb 7, 2021 15:37:25").getTime();
+var countDownDate = new Date("Feb 7, 2021 22:37:25").getTime(); // +7h für Bangkok
 
 // Update the count down every 1 second
 var x = setInterval(function() {
