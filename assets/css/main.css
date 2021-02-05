@@ -2557,8 +2557,11 @@ input[type="radio"]+label:before {
 	width: 100%;
 }
 #img-small {
-	width: 70%;
-	left: 25%;
+	width: 60%;
+}
+#img-small-right {
+	width: 60%;
+	float: right;
 }
 
 .image.main {
@@ -2945,7 +2948,7 @@ button.special,
 }
 .button.special.btn {
 	position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
