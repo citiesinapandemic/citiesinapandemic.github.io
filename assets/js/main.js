@@ -4,6 +4,8 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
+
+
 (function ($) {
 
 	// Breakpoints.
@@ -65,6 +67,9 @@
 
 })(jQuery);
 
+
+
+
 var countDownDate = new Date("Feb 8, 2021 15:37:25").getTime(); // +7h für Bangkok
 
 // Update the count down every 1 second
@@ -85,7 +90,7 @@ var x = setInterval(function() {
   // Output the result in an element with id="demo"
   document.getElementById("countdown").innerHTML ="The survey starts in: <b>"+ days + "</b> day <b>" + hours + "</b> hours <b>" + minutes + "</b> minutes <b>" + seconds + "</b> seconds ";
 	
-  console.log(document.getElementById("countdown").innerHTML)
+  //console.log(document.getElementById("countdown").innerHTML)
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
@@ -94,22 +99,31 @@ var x = setInterval(function() {
 }, 1000);
 
 
-	window.cookieconsent.initialise({
-		"palette": {
-			"popup": {
-				"background": "#FFFFFF",
-				"text": "#1C1C1C"
-			},
-			"button": {
-				"background": "#A4A4A4"
+// Cookie notification
+
+(function() {
+	if (!localStorage.getItem('cookieconsent')) {
+		var request = new XMLHttpRequest();
+		request.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var data = JSON.parse(request.responseText);
+				var eu_country_codes = ['AL','AD','AM','AT','BY','BE','BA','BG','CH','CY','CZ','DE','DK','EE','ES','FO','FI','FR','GB','GE','GI','GR','HU','HR','IE','IS','IT','LT','LU','LV','MC','MK','MT','NO','NL','PO','PT','RO','RU','SE','SI','SK','SM','TR','UA','VA'];
+				if (eu_country_codes.indexOf(data.countryCode) != -1) {
+					document.body.innerHTML += '\
+					<div class="cookieconsent" style="position:fixed;padding:20px;left:0;bottom:0;background-color:#000;color:#FFF;text-align:center;width:100%;z-index:99999;">\
+						This site uses cookies. By continuing to use this website, you agree to their use. \
+						<a href="#" style="color:#CCCCCC;">I Understand</a>\
+					</div>\
+					';
+					document.querySelector('.cookieconsent a').onclick = function(e) {
+						e.preventDefault();
+						document.querySelector('.cookieconsent').style.display = 'none';
+						localStorage.setItem('cookieconsent', true);
+					};
+				}
 			}
-		},
-		"theme": "edgeless",
-		"position": "bottom",
-		"content": {
-			"message": "This site uses cookies. By using the website and its offers and continuing to navigate, you accept these cookies.",
-			"dismiss": "Accept",
-			"link": "Data Privacy",
-			"href": "https://www.cookiesandyou.com/"
-		}
-	}); 
+		};
+		request.open('GET', 'http://ip-api.com/json', true);
+		request.send();
+	}
+})();
