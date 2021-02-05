@@ -2207,6 +2207,12 @@ header h6+p {
 		width: 100%;
 		margin-bottom: 3em;
 	}
+	#img-small,
+	#img-small-right{
+		width: unset !important;
+		margin: 3em
+	}
+
 
 	.flex.flex-2 article:last-child {
 		margin-bottom: 0;
@@ -3099,7 +3105,15 @@ button:disabled,
 	#header a.navPanelToggle {
 		display: inline-block;
 	}
+	#img-small {
+		width: 60%;
+		left: 0%;
 
+	}
+	#img-small-right {
+		width: 60%;
+		left: 0%;
+	}
 }
 
 @media screen and (max-width: 736px) {
