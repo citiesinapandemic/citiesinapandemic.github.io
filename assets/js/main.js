@@ -70,7 +70,7 @@
 
 
 
-var countDownDate = new Date("Feb 8, 2021 08:00:00").getTime(); // +7h für Bangkok
+var countDownDate = new Date("Feb 8, 2021, 08:00:00").getTime(); // +7h für Bangkok
 
 // Update the count down every 1 second
 var x = setInterval(function() {
